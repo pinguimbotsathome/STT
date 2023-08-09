@@ -1,0 +1,3 @@
+sounddevice
+openai-whisper
+scipy
