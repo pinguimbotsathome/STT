@@ -52,3 +52,8 @@ $ python wstt.py
 First it records the audio with sounddevice and saves it locally using scipy. Then, the audio is transcribed with Whisper AI. After transcription, delete_file is called to delete the audio file.
 #### Notes
 Whisper can only transcribe a 30 second audio. Because of this, it was decided to save an audio file with a set duration for the transcription. The variable ```duration``` represents the max time of recording.
+##### Error in numba.jit()
+Add **nopython=True** inside *@numba.jit()* decorator in file 
+```bash
+/lib/site-packages/whisper/timing.py:58 
+```
